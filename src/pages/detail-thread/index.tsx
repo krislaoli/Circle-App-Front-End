@@ -3,7 +3,7 @@ import Main from "../../layout/Main";
 
 export default function DetailThread() {
   return (
-    <Main>
+    <Main >
       <Thread />
     </Main>
   );

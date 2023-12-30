@@ -3,7 +3,7 @@ import ProfileForm from "../../components/MyProfile/ProfileForm";
 export default function EditProfile() {
   return (
     <Main>
-      <ProfileForm />
+      <ProfileForm  />
     </Main>
   );
 }

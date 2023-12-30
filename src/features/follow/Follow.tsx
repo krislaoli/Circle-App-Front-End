@@ -8,7 +8,7 @@ export default function FollowCard() {
   const auth = useSelector((state: RootState) => state.auth);
 
   return (
-    <Box h={'screen'} w={{ base: '130%', md: '100%' }} ml={{ base: -5, md: 0 }}>
+    <Box h={'screen'}  w={{ base: '130%', md: '100%' }} ml={{ base: -5, md: 0 }}>
       <Box>
         <Tabs isFitted variant="enclosed">
           <TabList mb="1em">

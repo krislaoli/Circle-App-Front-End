@@ -28,8 +28,8 @@ export default function MyProfile() {
 
   useEffect(() => {}, [Threads]);
   return (
-    <Box w={{ base: "115%", md: "100%" }}>
-      <Card w={"full"} bgColor={"#222"} boxShadow="lg" color={"white"}>
+    <Box w={{ base: "115%", md: "100%",   }}>
+      <Card w={"full"} bgColor={"#11235A"} boxShadow="lg" color={"white"}>
         <CardBody w={"full"}>
           <Box h="100px" w={{ base: "115%", md: "100%" }} left={{ base: -6, md: 0 }} position="relative">
             <Box position="absolute" top="50px" left="20px">
@@ -97,7 +97,7 @@ export default function MyProfile() {
           </Box>
         </CardBody>
       </Card>
-      <Box marginTop={10} width={{ base: "87%", md: "100%" }}>
+      <Box marginTop={10} width={{ base: "87%", md: "100%", bg: "#011b49;"}}>
         <Box>
           <Text fontSize="xl" fontWeight={"bold"}>
             Your threads
