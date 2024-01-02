@@ -19,7 +19,7 @@ export default function ProfileForm() {
   const shouldDisplaySidebar = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box w={{ base: "115%", md: "100%" }}>
+    <Box w={{ base: "115%", md: "100%", }}>
       <Box>
         <Text fontSize={"2xl"} fontWeight={"bold"} textAlign={"center"}>
           Your Profile

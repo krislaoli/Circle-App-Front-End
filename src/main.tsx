@@ -14,12 +14,17 @@ const theme = extendTheme({
     global: {
       body: {
         bg: 'darkBackground',
-        color: 'white',
+        color: 'none',
+        minHeight: '100vh',
       },
     },
   },
   colors: {
-    darkBackground: '#222',
+    darkBackground: '#011b49',
+    color: 'white',
+    _hover: {
+      textDecoration: 'underline',
+    },
   },
 });
 

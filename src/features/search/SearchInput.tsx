@@ -28,23 +28,23 @@ export function SearchList() {
   return (
     <Box>
       <Card
-        w={{ base: "117%", md: "100%" }}
-        p={6}
-        bgColor={"#222"}
+        w={{ base: "87%", md: "100%" }}
+        p={2}
+        bgColor={"#11235A"}
         boxShadow="lg"
         color={"white"}
-        mt={24}
+        mt={20}
       >
         <Box
           position={"fixed"}
-          w={{ base: "80%", md: "40%" }}
-          top={{ base: 10, md: 0 }}
-          left={{ base: 8, md: 80 }}
-          bgColor={"#222"}
+          w={{ base: "80%", md: "46%" }}
+          top={{ base: 100, md: 50 }}
+          left={{ base: 100, md: 295 }}
+          bgColor={"#11235A"}
           zIndex={1000}
-          pt={14}
+          pt={1}
         >
-          <Text mb={6} fontWeight={"bold"} fontSize={"xl"}>
+          <Text mb={1} fontWeight={"bold"} fontSize={"xl"}>
             Search
           </Text>
           <Box
@@ -53,6 +53,7 @@ export function SearchList() {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"space-between"}
+
           >
             <Input
               value={filter}
@@ -61,15 +62,18 @@ export function SearchList() {
               size="sm"
               border={"none"}
               mt={2}
+              // p={2}
               borderBottom={"1px solid gray"}
               w={"90%"}
               focusBorderColor="#222"
+              color={"white"}
+              boxShadow="lg"
             />
             <Button
               onClick={handleFilterButtonClick}
-              colorScheme="green"
+              color="#F8FAE5"
               size={"sm"}
-              mt={2}
+              mt={3}
             >
               <AiOutlineSearch />
             </Button>

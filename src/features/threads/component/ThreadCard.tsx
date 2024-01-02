@@ -73,9 +73,9 @@ export default function ThreadCard(props: IThreadProps) {
           p={{ base: 4, md: 6 }}
           paddingTop={6}
           paddingBottom={6}
-          bgColor={"#222"}
           boxShadow="xl"
           color={"white"}
+          bgColor={"#11235A"}
         >
           <Flex w={"full"}>
             <Avatar name={full_name} size={{ base: "sm", md: "md" }} />

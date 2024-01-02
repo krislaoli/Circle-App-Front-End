@@ -54,7 +54,7 @@ export function SuggestedCard(props: IFollow) {
   );
 
   return (
-    <Flex justifyContent="space-between" mb={2} alignItems={"center"}>
+    <Flex justifyContent="space-between" mb={2} alignItems={"center"} >
       <Box>
         <Flex key={id} alignItems={"center"}>
           <Avatar name={full_name} size={{ base: "sm", md: "md" }} />
@@ -68,7 +68,7 @@ export function SuggestedCard(props: IFollow) {
           </Box>
         </Flex>
       </Box>
-      <Box>
+      <Box >
         <Box>
           {isFollowing ? (
             <Button
@@ -136,11 +136,11 @@ export default function Suggested() {
   }, [User, auth.id, suggestedUsers]);
 
   return (
-    <Box height={"70%"}>
+    <Box height={"70%"} marginTop={"-80px"}>
       <Card
         w="100%"
         p={6}
-        bgColor={"#222"}
+        bgColor={"#11235A"}
         boxShadow="lg"
         color={"white"}
         height={"100%"}

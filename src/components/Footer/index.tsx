@@ -4,8 +4,8 @@ import { BsFacebook } from 'react-icons/bs';
 
 export default function Footer() {
   return (
-    <Box>
-      <Card p={6} bgColor={'#222'} boxShadow='lg' color={'white'}>
+    <Box >
+      <Card marginTop={"-180px"} p={6} bgColor={"#11235A"} boxShadow='lg' color={'white'}>
         <Box>
           <Flex>
             <Text fontSize='xs' mr={4} fontWeight={'bold'}>Develop By Kris </Text>
@@ -17,7 +17,7 @@ export default function Footer() {
             </Flex>
           </Flex>
           <Flex>
-            <Text fontSize='xs'>Powered 💖 by Dumbways Indonesia • #1 Coding Bootcamp</Text>
+            <Text fontSize='xs'>Powered by Dumbways Indonesia • #1 Coding Bootcamp</Text>
           </Flex>
         </Box>
       </Card>

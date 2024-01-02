@@ -50,7 +50,7 @@ export default function LoginCard() {
           >
             Login to Circle
           </Text>
-          <Stack spacing={4} mt={10}>
+          <Stack spacing={4} mt={10} >
               <FormControl mb={6} id="email" isRequired minW="350px">
                 <FormLabel color={"#F6ECA9"}>Email</FormLabel>
                 <Input

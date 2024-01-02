@@ -21,14 +21,15 @@ export default function ThreadsForm() {
     <Box
       position={{ base: "relative", md: "fixed" }}
       top={0}
-      pt={{ base: 0, md: 10 }}
+      // pt={{ base: 5, md: 5 }}
+      padding={{ base: 100, md: 2 }}
       zIndex={"10000"}
-      backgroundColor={"#222"}
-      w={{ base: "115%", md: "45%" }}
+      bgColor={"#11235A"}
+      w={{ base: "50%", md: "45.7%" }}
       marginBottom={-20}
     >
       <Box mb={4}>
-        <Text fontSize={"xl"}>Home</Text>
+        <Text fontSize={"xl"} >Home</Text>
       </Box>
       <form
         onSubmit={(e) => {
@@ -49,6 +50,7 @@ export default function ThreadsForm() {
                 value={form.content}
                 mt={2}
                 focusBorderColor="#222"
+                // bgColor={"white"}
               />
             </Box>
             <Input
@@ -61,6 +63,7 @@ export default function ThreadsForm() {
               ref={fileInputRef}
               value={""}
               hidden
+              bgColor={"white"}
             />
           </Box>
           <Box>
@@ -68,7 +71,7 @@ export default function ThreadsForm() {
               <Button onClick={handleButtonClick} >
                 <BiImageAdd size={20} />
               </Button>
-              <Button colorScheme="green" type="submit" isLoading={isPending}>
+              <Button bgColor={"#008000"} _hover={{ bgColor: "yellow", color: "black" }} type="submit" isLoading={isPending}>
                 Post
               </Button>
             </Box>

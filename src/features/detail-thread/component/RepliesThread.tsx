@@ -23,7 +23,7 @@ export default function RepliesThreadForm() {
   } = useCreateReply();
 
   return (
-    <Box w={"full"}>
+    <Box w={"full"} bgColor={"#11235A"}>
       <Accordion allowToggle>
         <AccordionItem>
           <h2>

@@ -28,19 +28,19 @@ export default function MyProfile() {
 
   useEffect(() => {}, [Threads]);
   return (
-    <Box w={{ base: "115%", md: "100%",   }}>
+    <Box w={{ base: "115%", md: "100%", bgroundColor: "#11235A"  }}>
       <Card w={"full"} bgColor={"#11235A"} boxShadow="lg" color={"white"}>
         <CardBody w={"full"}>
           <Box h="100px" w={{ base: "115%", md: "100%" }} left={{ base: -6, md: 0 }} position="relative">
             <Box position="absolute" top="50px" left="20px">
               <Avatar
                 name={auth?.full_name}
-                border="8px solid #222"
+                border="5px solid #FFFADD"
                 size="xl"
               />
             </Box>
             <Image
-              src="https://i.pinimg.com/564x/51/1b/79/511b792b68e7c7f14e3f14c92e2a4543.jpg"
+              src="https://i.pinimg.com/564x/f2/1b/c0/f21bc06e3804bf1d7d75cf9dc425971f.jpg"
               objectFit={"cover"}
               borderRadius="lg"
               h="100%"
@@ -68,7 +68,7 @@ export default function MyProfile() {
           </Box>
           <Box>
             <Text fontSize="xl" fontWeight={"bold"}>
-              🙏 {auth?.full_name}
+               {auth?.full_name}
             </Text>
             <Text fontSize="xs" color="gray.400">
               @{usernameUser}
@@ -97,7 +97,7 @@ export default function MyProfile() {
           </Box>
         </CardBody>
       </Card>
-      <Box marginTop={10} width={{ base: "87%", md: "100%", bg: "#011b49;"}}>
+      <Box marginTop={10} width={{ base: "87%", md: "100%", background: "#011b49;"}}>
         <Box>
           <Text fontSize="xl" fontWeight={"bold"}>
             Your threads

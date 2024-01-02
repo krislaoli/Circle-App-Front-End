@@ -8,8 +8,12 @@ export default function Main({ children }: { children: ReactNode }) {
   const shouldDisplaySidebar = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box p={10} width={"100%"}>
-      <Flex direction={{ base: "column", md: "row" }} height="100%">
+    <Box p={10} width={"100%"} >
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        height="100%"
+        bg={"#011b49;"}
+      >
         {shouldDisplaySidebar ? (
           <Box
             width={{ base: "0%", md: "20%" }}
@@ -19,6 +23,7 @@ export default function Main({ children }: { children: ReactNode }) {
             left="0"
             p={10}
             borderRight={"1px solid black"}
+            bg={"#011b49;"}
           >
             <Navbar />
           </Box>
@@ -42,6 +47,7 @@ export default function Main({ children }: { children: ReactNode }) {
             position="fixed"
             right="0"
             display={"flex"}
+            bg={"#011b49;"}
             flexDirection={"column"}
             justifyContent={"space-between"}
             height="100%"

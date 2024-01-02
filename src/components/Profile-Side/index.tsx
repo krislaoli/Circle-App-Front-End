@@ -22,27 +22,27 @@ export default function ProfileSide() {
   const shouldDisplaySidebar = useBreakpointValue({ base: false, md: true });
   const { Threads } = useThreads();
 
-  const userThreads = Threads?.filter(
-    (thread) => thread.createdById?.id === auth?.id
-  );
+  // const userThreads = Threads?.filter(
+  //   (thread) => thread.createdById?.id === auth?.id
+  // );
 
   const username = auth?.username?.replace(/\s/g, "");
 
   useEffect(() => {}, [Threads]);
   return (
-    <Box w={{ base: "115%", md: "100%" }} display={'flex'} flexDirection={'column'} justifyContent={'space-between'} height={'90%'}>
-      <Card w={"full"} bgColor={"#222"} boxShadow="lg" color={"white"}>
+    <Box w={{ base: "115%", md: "95%" }} display={'flex'} flexDirection={'column'} justifyContent={'space-between'} height={'90%'} >
+      <Card w={"full"} bgColor={"#11235A"} boxShadow="lg" color={"white"}>
         <CardBody w={"full"}>
           <Box h="100px" w="100%" position="relative">
             <Box position="absolute" top="50px" left="20px">
               <Avatar
                 name={auth?.full_name}
-                border="8px solid #222"
+                border="5px solid #FFFADD"
                 size="xl"
               />
             </Box>
             <Image
-              src="https://i.pinimg.com/564x/51/1b/79/511b792b68e7c7f14e3f14c92e2a4543.jpg"
+              src="https://i.pinimg.com/564x/f2/1b/c0/f21bc06e3804bf1d7d75cf9dc425971f.jpg"
               objectFit={"cover"}
               borderRadius="lg"
               h="100%"
@@ -59,7 +59,6 @@ export default function ProfileSide() {
           >
             <Link to="/edit-profile">
               <Button
-                colorScheme="teel"
                 variant="outline"
                 size="xs"
                 style={{ borderRadius: "1100px" }}
@@ -77,12 +76,12 @@ export default function ProfileSide() {
             </Text>
             <Text fontSize="xs">{auth?.bio}</Text>
             <Flex gap={6} mt={4}>
-              <Flex gap={1}>
+              {/* <Flex gap={1}>
                 <Text fontSize="xs" fontWeight={"bold"}>
                   {userThreads?.length}
                 </Text>
                 <Text fontSize="xs"> Threads</Text>
-              </Flex>
+              </Flex> */}
               <Flex gap={1}>
                 <Text fontSize="xs" fontWeight={"bold"}>
                   {auth?.following?.length}

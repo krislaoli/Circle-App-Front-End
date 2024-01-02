@@ -10,7 +10,7 @@ export default function Threads() {
 
   useEffect(() => {}, [Threads]);
   return (
-    <Box>
+    <Box bgColor={"#11235A"}>
       <ThreadsForm />
       <Box marginTop={24}>
         {Threads?.map((item: IThreadCard) => {
