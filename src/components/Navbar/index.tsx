@@ -34,13 +34,13 @@ export default function Navbar() {
           <Box display={"flex"} alignItems="center" marginBottom={30}>
             <BiHomeCircle  />
             <ListItem ms={3}>
-              <Link to="/follow">Home.</Link>
+              <Link to="/">Home.</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
             <BiSearchAlt  />
             <ListItem ms={3}>
-              <Link to="/follow">Search.</Link>
+              <Link to="/search">Search.</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>

@@ -37,9 +37,9 @@ export function SearchList() {
       >
         <Box
           position={"fixed"}
-          w={{ base: "80%", md: "46%" }}
+          w={{ base: "80%", md: "47%" }}
           top={{ base: 100, md: 50 }}
-          left={{ base: 100, md: 295 }}
+          left={{ base: 100, md: 408 }}
           bgColor={"#11235A"}
           zIndex={1000}
           pt={1}
@@ -53,7 +53,6 @@ export function SearchList() {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"space-between"}
-
           >
             <Input
               value={filter}
