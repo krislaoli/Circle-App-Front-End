@@ -3,10 +3,10 @@ import { RiHome7Fill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { FiLogOut } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 import { RiUserFollowLine } from "react-icons/ri";
 import { AUTH_LOGOUT } from "../../store/RootReducer";
+import { BiHeart, BiHomeCircle, BiLogOut, BiSearchAlt, BiUserCircle } from "react-icons/bi";
 export default function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -30,82 +30,66 @@ export default function Navbar() {
         </Box>
 
         <List alignItems={"center"}>
-          <Link to="/">
-            <ListItem
-              display={"flex"}
-              alignItems={"center"}
-              p={4}
-              _hover={{ boxShadow: "xl" }}
-              cursor={"pointer"}
-            >
-              <ListIcon as={RiHome7Fill} />
-              <Text>Home</Text>
-            </ListItem>
-          </Link>
-          <Link to="/search">
-            <ListItem
-              display={"flex"}
-              alignItems={"center"}
-              p={4}
-              _hover={{ boxShadow: "xl" }}
-              cursor={"pointer"}
-            >
-              <ListIcon as={FaSearch} />
-              <Text>Search</Text>
-            </ListItem>
-          </Link>
 
-          <Link to="/follow">
-            <ListItem
-              display={"flex"}
-              alignItems={"center"}
-              p={4}
-              _hover={{ boxShadow: "xl" }}
-              cursor={"pointer"}
-            >
-              <ListIcon as={RiUserFollowLine} />
-              <Text>Follow</Text>
+          <Box display={"flex"} alignItems="center" marginBottom={30}>
+            <BiHomeCircle  />
+            <ListItem ms={3}>
+              <Link to="/follow">Home.</Link>
             </ListItem>
-          </Link>
-          <Link to="/profile">
-            <ListItem
-              display={"flex"}
-              alignItems={"center"}
-              p={4}
-              _hover={{ boxShadow: "xl" }}
-              cursor={"pointer"}
-            >
-              <ListIcon as={CgProfile} />
-              <Text>Profile</Text>
+          </Box>
+          <Box display={"flex"} alignItems="center" marginBottom={30}>
+            <BiSearchAlt  />
+            <ListItem ms={3}>
+              <Link to="/follow">Search.</Link>
             </ListItem>
-          </Link>
+          </Box>
+          <Box display={"flex"} alignItems="center" marginBottom={30}>
+            <BiHeart />
+            <ListItem ms={3}>
+              <Link to="/follow">Follows.</Link>
+            </ListItem>
+          </Box>
+          <Box display={"flex"} alignItems="center" marginBottom={30}>
+            <BiUserCircle  />
+            <ListItem ms={3}>
+              <Link to="/profile">Profile.</Link>
+            </ListItem>
+          </Box>
+
+
+  
         </List>
 
         <Button
-          colorScheme="green"
+          bgColor={"#008000"}
           w="80%"
           mt={6}
-          style={{ borderRadius: "50px" }}
+          fontWeight={"bold"}
+          _hover={{ bgColor: "yellow", color: "black" }}
+          style={{ borderRadius: "10px" }}
         >
           Create Post
         </Button>
       </Box>
 
       <Box>
-        <Button
-          gap={2}
-          colorScheme="red"
-          w="80%"
-          mt={6}
-          style={{ borderRadius: "50px" }}
-          onClick={() => {
-            handleLogout();
-            navigate("/");
-          }}
-        >
-          Logout
-          <FiLogOut />
-        </Button>
+      <Button
+        w="80%"
+        mt={6}
+        gap={2}
+        display={"flex"}
+
+        variant="unstyled"
+        color="white"
+        leftIcon={<BiLogOut />}
+        onClick={() => {
+          handleLogout();
+          navigate("/");
+        }}
+      >
+       <Text>Logout</Text> 
+      </Button>
+ 
       </Box>
     </Box>
   );
