@@ -25,7 +25,7 @@ export default function ThreadsForm() {
       padding={{ base: 100, md: 2 }}
       zIndex={"10000"}
       bgColor={"#11235A"}
-      w={{ base: "50%", md: "45.7%" }}
+      w={{ base: "50%", md: "47%" }}
       marginBottom={-20}
     >
       <Box mb={4}>
