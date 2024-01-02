@@ -7,12 +7,19 @@ import { FaSearch } from "react-icons/fa";
 import { RiUserFollowLine } from "react-icons/ri";
 import { AUTH_LOGOUT } from "../../store/RootReducer";
 import { BiHeart, BiHomeCircle, BiLogOut, BiSearchAlt, BiUserCircle } from "react-icons/bi";
+import useToast from "./hook/loginHook";
 export default function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // function handleLogout() {
+  //   dispatch(AUTH_LOGOUT());
+  // }
+
+  const toast = useToast();
   function handleLogout() {
     dispatch(AUTH_LOGOUT());
+    toast("Logout", "Logout Successful", "info");
   }
 
   return (
@@ -24,7 +31,7 @@ export default function Navbar() {
     >
       <Box>
         <Box mb={4}>
-          <Text fontSize="5xl" color="green.400" as="b">
+          <Text fontSize="5xl" color="#008000" as="b">
             Circle
           </Text>
         </Box>
