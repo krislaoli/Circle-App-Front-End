@@ -37,8 +37,10 @@ export function SearchList() {
       >
         <Box
           position={"fixed"}
+          padding={2}
+
           w={{ base: "80%", md: "47%" }}
-          top={{ base: 100, md: 50 }}
+          top={{ base: 100, md: 10 }}
           left={{ base: 100, md: 408 }}
           bgColor={"#11235A"}
           zIndex={1000}
@@ -53,18 +55,19 @@ export function SearchList() {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"space-between"}
+            
           >
             <Input
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
               placeholder="Search"
               size="sm"
-              border={"none"}
+              border={"1px solid gray"}
               mt={2}
               // p={2}
               borderBottom={"1px solid gray"}
               w={"90%"}
-              focusBorderColor="#222"
+              focusBorderColor="none"
               color={"white"}
               boxShadow="lg"
             />

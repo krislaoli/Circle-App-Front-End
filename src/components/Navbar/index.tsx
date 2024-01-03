@@ -6,15 +6,17 @@ import { useDispatch } from "react-redux";
 import { FaSearch } from "react-icons/fa";
 import { RiUserFollowLine } from "react-icons/ri";
 import { AUTH_LOGOUT } from "../../store/RootReducer";
-import { BiHeart, BiHomeCircle, BiLogOut, BiSearchAlt, BiUserCircle } from "react-icons/bi";
+import {
+  BiHeart,
+  BiHomeCircle,
+  BiLogOut,
+  BiSearchAlt,
+  BiUserCircle,
+} from "react-icons/bi";
 import useToast from "./hook/loginHook";
 export default function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  // function handleLogout() {
-  //   dispatch(AUTH_LOGOUT());
-  // }
 
   const toast = useToast();
   function handleLogout() {
@@ -37,34 +39,30 @@ export default function Navbar() {
         </Box>
 
         <List alignItems={"center"}>
-
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiHomeCircle  />
+            <BiHomeCircle size={"1.5em"} />
             <ListItem ms={3}>
-              <Link to="/">Home.</Link>
+              <Link to="/">Home</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiSearchAlt  />
+            <BiSearchAlt size={"1.5em"} />
             <ListItem ms={3}>
-              <Link to="/search">Search.</Link>
+              <Link to="/search">Search</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiHeart />
+            <BiHeart size={"1.5em"} />
             <ListItem ms={3}>
-              <Link to="/follow">Follows.</Link>
+              <Link to="/follow">Follows</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiUserCircle  />
+            <BiUserCircle size={"1.5em"} />
             <ListItem ms={3}>
-              <Link to="/profile">Profile.</Link>
+              <Link to="/profile">Profile</Link>
             </ListItem>
           </Box>
-
-
-  
         </List>
 
         <Button
@@ -80,23 +78,21 @@ export default function Navbar() {
       </Box>
 
       <Box>
-      <Button
-        w="80%"
-        mt={6}
-        gap={2}
-        display={"flex"}
-
-        variant="unstyled"
-        color="white"
-        leftIcon={<BiLogOut />}
-        onClick={() => {
-          handleLogout();
-          navigate("/");
-        }}
-      >
-       <Text>Logout</Text> 
-      </Button>
- 
+        <Button
+          w="80%"
+          mt={6}
+          gap={2}
+          display={"flex"}
+          variant="unstyled"
+          color="white"
+          leftIcon={<BiLogOut size={"2em"} />}
+          onClick={() => {
+            handleLogout();
+            navigate("/");
+          }}
+        >
+          <Text>Log Out</Text>
+        </Button>
       </Box>
     </Box>
   );

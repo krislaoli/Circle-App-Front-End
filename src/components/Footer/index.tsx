@@ -1,6 +1,7 @@
-import { Box, Flex, Text, Card } from '@chakra-ui/react';
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
+import { Box, Flex, Text, Card, Image } from '@chakra-ui/react';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
+import Logo from '../../assets/logohaeader.png'
 
 export default function Footer() {
   return (
@@ -8,17 +9,38 @@ export default function Footer() {
       <Card marginTop={"-180px"} p={6} bgColor={"#11235A"} boxShadow='lg' color={'white'}>
         <Box>
           <Flex>
-            <Text fontSize='xs' mr={4} fontWeight={'bold'}>Develop By Kris </Text>
+            <Text fontSize='xs' mr={4} fontWeight={'bold'}>Develop By Kris</Text>
             <Flex gap={2}>
               <AiFillGithub />
-              <AiFillLinkedin />
               <BsFacebook />
-              <AiFillInstagram />
+              <AiFillLinkedin />
+              {/* <AiFillInstagram /> */}
             </Flex>
           </Flex>
-          <Flex>
-            <Text fontSize='xs'>Powered by Dumbways Indonesia • #1 Coding Bootcamp</Text>
-          </Flex>
+          <Box display={"flex"} alignItems={"center"}>
+        <Text
+          color={"white"}
+          fontSize={"xs"}
+          textTransform={"capitalize"}
+          mr={"1"}
+        >
+          powered by
+        </Text>
+        <Image
+          boxSize="15px"
+          objectFit="cover"
+          src={Logo}
+          alt="Dan Abramov"
+        />
+         <Text
+          color={"white"}
+          fontSize={"xs"}
+          textTransform={"capitalize"}
+          ms={"1"}
+        >
+          Dumbways Indonesia . #1CodingBootCamp
+        </Text>
+      </Box>
         </Box>
       </Card>
     </Box>

@@ -37,8 +37,8 @@ export default function RegisterCard() {
     <Stack spacing={8} py={12} px={6} w={"auto"} mx="auto">
       <Stack align={"center"}>
         <Box rounded={"lg"} boxShadow={"lg"} p={30} bgColor={"#11235A"}>
-          <Heading fontSize={"4xl"} textAlign={"center"}>
-            <Text as={"span"} color={"green"}>
+          <Heading textAlign={"center"}>
+            <Text as={"span"} color={"green"} fontSize={"5xl"}>
               Circle
             </Text>
           </Heading>
@@ -47,53 +47,49 @@ export default function RegisterCard() {
             fontWeight={600}
             textAlign={"center"}
             m={1}
-            color={"#F6ECA9"} 
+            color={"white"} 
           >
             Create account circle
           </Text>
-          <Stack spacing={4} mt={10}>
+          <Stack spacing={4} mt={5}>
             <FormControl id="full_name" isRequired minW="350px">
-              <FormLabel color={"#F6ECA9"}>Full Name</FormLabel>
+              <FormLabel color={"white"}>Full Name</FormLabel>
               <Input
                 onChange={handleChange}
                 placeholder="Full Name"
                 name="full_name"
-                type="name" color={"black"}
-                bgColor={"#F6ECA9"}
+                type="name" color={"white"}
               />
             </FormControl>
             <FormControl id="Username" isRequired minW="350px">
-              <FormLabel color={"#F6ECA9"}>Username</FormLabel>
+              <FormLabel color={"white"}>Username</FormLabel>
               <Input
                 onChange={handleChange}
                 placeholder="Username"
                 name="username"
-                type="name" color={"black"}
-                bgColor={"#F6ECA9"}
+                type="name" color={"white"}
               />
             </FormControl>
             <FormControl id="email" isRequired>
-              <FormLabel color={"#F6ECA9"}>Email</FormLabel>
+              <FormLabel color={"white"}>Email</FormLabel>
               <Input
                 onChange={handleChange}
                 placeholder="Email"
                 name="email"
-                type="email" color={"black"}
-                bgColor={"#F6ECA9"}
+                type="email" color={"white"}
               />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel color={"#F6ECA9"}>Password</FormLabel>
+              <FormLabel color={"white"}>Password</FormLabel>
               <InputGroup>
-                <Input color={"black"}
+                <Input color={"white"}
                   name="password"
                   onChange={handleChange}
                   placeholder="Password"
                   type={showPassword ? "text" : "password"}
-                  bgColor={"#F6ECA9"}
                 />
                 <InputRightElement width="4.5rem">
-                  <IconButton color={"black"}
+                  <IconButton color={"white"}
                     aria-label={
                       showPassword ? "Hide password" : "Show password"
                     }
@@ -117,7 +113,7 @@ export default function RegisterCard() {
               Register
             </Button>
 
-            <Text color={"#F6ECA9"}>
+            <Text color={"white"} textAlign={"center"}>
               Allready have an account?{" "}
               <Link to={"/login"}>
                 <span style={{ color: "#F4CE14", fontWeight: "bold" }}>

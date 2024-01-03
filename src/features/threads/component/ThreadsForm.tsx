@@ -49,7 +49,6 @@ export default function ThreadsForm() {
                 name="content"
                 value={form.content}
                 mt={2}
-                focusBorderColor="#222"
                 // bgColor={"white"}
               />
             </Box>

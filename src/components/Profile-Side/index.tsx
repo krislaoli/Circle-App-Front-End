@@ -61,7 +61,8 @@ export default function ProfileSide() {
               <Button
                 variant="outline"
                 size="xs"
-                style={{ borderRadius: "1100px" }}
+
+                borderRadius={"5px"}
               >
                 Edit Profile
               </Button>

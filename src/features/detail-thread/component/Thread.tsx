@@ -26,19 +26,30 @@ export default function Thread() {
     },
   });
 
+  const created = new Date(DetailThread?.created_at);
+  const formatDate = created.toLocaleString("id-ID", {
+  weekday:  "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  })
+
   return (
     <div>
       {isLoading ? (
-        <Box>Loading...</Box>
+        <Box>Tunggu Dulu Bos...</Box>
       ) : (
         <Box w={{ base: "115%", md: "100%" }}>
           <Card
             w={"full"}
             mb={2}
             p={{ base: 0, md: 6 }}
-            bgColor={"#222"}
             boxShadow="xl"
             color={"white"}
+            bgColor={"#11235A"}
           >
             <Flex>
               <Avatar
@@ -59,22 +70,24 @@ export default function Thread() {
                         : ""}
                     </Text>
                     <Text fontSize="xs" color="gray.400">
-                      • {DetailThread.created_at}
+                      • {formatDate}
                     </Text>
                   </Flex>
                 </Box>
-                <Text fontSize="xs" mt={4}>
+                <Text fontSize="xl" mt={4}>
                   {DetailThread.content}
                 </Text>
                 {DetailThread.image && (
-                  <Image
-                    src={DetailThread.image}
-                    h={"300px"}
-                    w={"full"}
-                    mt={4}
-                    objectFit={"cover"}
-                    style={{ borderRadius: "5px" }}
-                  />
+                  <Box>
+                    <Image
+                      src={DetailThread.image}
+                      h={"full"}
+                      // w={"full"}
+                      // mt={4}
+                      objectFit={"cover"}
+                      style={{ borderRadius: "5px" }}
+                    />
+                  </Box>
                 )}
                 <Box alignItems="center" mt={4}></Box>
               </Box>
@@ -85,7 +98,7 @@ export default function Thread() {
               <RepliesThreadForm />
             </Box>
             {/* Replies */}
-            <Card p={4} bgColor={"#222"} boxShadow="xl" color={"white"}>
+            <Card p={4} bgColor={"#11235A"} boxShadow="xl" color={"white"}>
               <Text fontWeight={"bold"}>
                 {DetailThread.replies?.length} Replies{" "}
               </Text>
@@ -106,7 +119,7 @@ export default function Thread() {
                             @{item.userId.username}
                           </Text>
                           <Text fontSize={"xs"} color="gray.400">
-                            • {item.created_at}
+                            • {formatDate}
                           </Text>
                         </Flex>
                       </Box>

@@ -81,6 +81,7 @@ export function SuggestedCard(props: IFollow) {
               mt={8}
               w="fit-content"
               opacity="70%"
+              borderRadius={"5px"}
             >
               Unfollow
             </Button>
@@ -94,6 +95,7 @@ export function SuggestedCard(props: IFollow) {
               variant="outline"
               mt={8}
               w="fit-content"
+              borderRadius={"5px"}
             >
               Follow
             </Button>
@@ -136,7 +138,7 @@ export default function Suggested() {
   }, [User, auth.id, suggestedUsers]);
 
   return (
-    <Box height={"70%"} marginTop={"-80px"}>
+    <Box height={"70%"} marginTop={"-100px"}>
       <Card
         w="100%"
         p={6}

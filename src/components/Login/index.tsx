@@ -19,59 +19,56 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function LoginCard() {
   const { handleChange, handleLogin } = useLogin();
-    const [showPassword, setShowPassword] = useState(false);
-    const handleTogglePassword = () => {
-      setShowPassword(!showPassword);
-    };
+  const [showPassword, setShowPassword] = useState(false);
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
-
     <Flex
-    bg={"#011b49;"}
-    color={"color.100"}
-    align={"center"}
-    justify={"center"}
-    minH={"100vh"}
-  >
-    <Stack spacing={8} py={12} px={6} w={"auto"} mx="auto">
-      <Stack align={"center"}>
-        <Box rounded={"lg"} boxShadow={"lg"} p={30} bgColor={"#11235A"}>
-          <Heading fontSize={"4xl"} textAlign={"center"}>
-            <Text as={"span"} color={"#008000"}>
-              Circle
+      bg={"#011b49;"}
+      color={"color.100"}
+      align={"center"}
+      justify={"center"}
+      minH={"100vh"}
+    >
+      <Stack spacing={8} py={12} px={6} w={"auto"} mx="auto">
+        <Stack align={"center"}>
+          <Box rounded={"lg"} boxShadow={"lg"} p={30} bgColor={"#11235A"}>
+            <Heading  textAlign={"center"}>
+              <Text as={"span"} color={"#008000"} fontSize={"5xl"}>
+                Circle
+              </Text>
+            </Heading>
+            <Text
+              fontSize="xl"
+              fontWeight={600}
+              textAlign={"center"}
+              m={1}
+              color={"white"}
+            >
+              Login to Circle
             </Text>
-          </Heading>
-          <Text
-            fontSize="xl"
-            fontWeight={600}
-            textAlign={"center"}
-            m={1}
-            color={"#F6ECA9"}
-          >
-            Login to Circle
-          </Text>
-          <Stack spacing={4} mt={10} >
-              <FormControl mb={6} id="email" isRequired minW="350px">
-                <FormLabel color={"#F6ECA9"}>Email</FormLabel>
+            <Stack spacing={4} mt={4}>
+              <FormControl mb={2} id="email" isRequired minW="350px">
+                <FormLabel color={"white"}>Email</FormLabel>
                 <Input
-                color={"black"}
+                  color={"white"}
                   onChange={handleChange}
-                  // placeholder="Email/Username"
+                  placeholder="Email/Username"
                   name="email"
                   type="email"
-                  bgColor={"#F6ECA9"}
                 />
               </FormControl>
-              <FormControl mb={6} id="password" isRequired>
-                <FormLabel color={"#F6ECA9"}>Password</FormLabel>
+              <FormControl  id="password" isRequired>
+                <FormLabel color={"white"}>Password</FormLabel>
                 <InputGroup>
                   <Input
-                  color={"black"}
+                    color={"white"}
                     onChange={handleChange}
                     name="password"
-                    // placeholder="Password"
+                    placeholder="Password"
                     type={showPassword ? "text" : "password"}
-                    bgColor={"#F6ECA9"}
                   />
                   <InputRightElement width="4.5rem">
                     <IconButton
@@ -80,7 +77,7 @@ export default function LoginCard() {
                       }
                       h="0rem"
                       size="xl"
-                      color={"black"}
+                      color={"white"}
                       onClick={handleTogglePassword}
                       icon={showPassword ? <FaEyeSlash /> : <FaEye />}
                     />
@@ -89,9 +86,9 @@ export default function LoginCard() {
               </FormControl>
 
               <Button
-              onClick={handleLogin}
+                onClick={handleLogin}
                 bgColor={"green"}
-                color={"black"}
+                color={"white"}
                 fontWeight={"bold"}
                 w="full"
                 type="submit"
@@ -100,18 +97,18 @@ export default function LoginCard() {
               >
                 Login
               </Button>
-            <Text color={"#black"}  textAlign={"center"}>
-              Don't have an account yet?{" "}
-              <Link to="/register" color="#F4CE14">
-                <span style={{ color: "#F4CE14", fontWeight: "bold" }}>
-                  Register
-                </span>
-              </Link>
-            </Text>
-          </Stack>
-        </Box>
+              <Text color={"#black"} textAlign={"center"}>
+                Don't have an account yet?{" "}
+                <Link to="/register" color="#F4CE14">
+                  <span style={{ color: "#F4CE14", fontWeight: "bold" }}>
+                    Register
+                  </span>
+                </Link>
+              </Text>
+            </Stack>
+          </Box>
+        </Stack>
       </Stack>
-    </Stack>
-  </Flex>
+    </Flex>
   );
 }

@@ -12,10 +12,9 @@ import { useState } from "react";
 import { BsHeart } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { AUTH_CHECK } from "../../../store/RootReducer";
-
 interface IThreadProps {
   id?: number;
-  created_at?: string;
+  created_at: string;
   content?: string;
   image?: string;
   replies?: RepliesCard[];
@@ -24,17 +23,16 @@ interface IThreadProps {
   likes?: likes[];
 }
 
-export default function ThreadCard(props: IThreadProps) {
-  const {
-    username,
-    full_name,
-    created_at,
-    content,
-    image,
-    replies,
-    likes,
-    id,
-  } = props;
+export default function ThreadCard({
+  id,
+  created_at,
+  content,
+  image,
+  replies,
+  full_name,
+  username,
+  likes,
+}: IThreadProps) {
   const dispatch = useDispatch();
 
   const auth = useSelector((state: RootState) => state.auth);
@@ -64,6 +62,17 @@ export default function ThreadCard(props: IThreadProps) {
     handleLike();
   }
 
+  const currentDate = new Date(created_at);
+  const formatCurrentTime  = currentDate.toLocaleString("id-ID", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    // hour: "numeric",
+    // minute: "numeric",
+    // second: "numeric",
+  });
+
   return (
     <Box w={{ base: "110%", md: "95%" }}>
       <Box key={id} w={"full"}>
@@ -88,14 +97,14 @@ export default function ThreadCard(props: IThreadProps) {
                   @{username}
                 </Text>
                 <Text fontSize="xs" color="gray.400">
-                  • {created_at}
+                  • {formatCurrentTime}
                 </Text>
               </Flex>
-              <Text fontSize="xs" mt={4}>
+              <Text fontSize="xl" mt={4}>
                 {content}
               </Text>
               {image && (
-                <Box h={"200px"} w={"250px"} mt={4}>
+                <Box h={"550px"} w={"725px"} mt={4}>
                   <Image
                     src={image}
                     h={"full"}

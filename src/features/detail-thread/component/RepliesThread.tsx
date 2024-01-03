@@ -4,10 +4,10 @@ import {
   Flex,
   Avatar,
   Input,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
+  // Accordion,
+  // AccordionItem,
+  // AccordionButton,
+  // AccordionPanel,
 } from "@chakra-ui/react";
 import { useCreateReply } from "../hooks/useFormReply";
 import { BiImageAdd } from "react-icons/bi";
@@ -23,17 +23,17 @@ export default function RepliesThreadForm() {
   } = useCreateReply();
 
   return (
-    <Box w={"full"} bgColor={"#11235A"}>
-      <Accordion allowToggle>
-        <AccordionItem>
+    <Box mt={5} mb={4} padding={3} rounded={"lg"} w={"full"} bgColor={"#11235A"}>
+      {/* <Accordion allowToggle> */}
+        {/* <AccordionItem> */}
           <h2>
-            <AccordionButton>
+            {/* <AccordionButton> */}
               <Box as="span" flex="1" textAlign="left">
-                Add reply
+                Post Your Reply
               </Box>
-            </AccordionButton>
+            {/* </AccordionButton> */}
           </h2>
-          <AccordionPanel pb={4}>
+          {/* <AccordionPanel pb={4}> */}
             <form
               onSubmit={(e) => {
                 e.preventDefault(), mutate();
@@ -55,17 +55,16 @@ export default function RepliesThreadForm() {
                       pb={1}
                     >
                       <Input
-                        placeholder="Type your reply"
+                        placeholder="Comments"
                         size={"sm"}
                         border={"none"}
                         onChange={handleChange}
                         value={form.content}
                         name="content"
-                        focusBorderColor="#222"
                       />
                     </Box>
                     <Input
-                      placeholder="Type your reply"
+                      placeholder="Comments"
                       size={"sm"}
                       border={"none"}
                       onChange={handleChange}
@@ -80,7 +79,8 @@ export default function RepliesThreadForm() {
                     <BiImageAdd size={20} />
                   </Button>
                   <Button
-                    colorScheme="green"
+                    bgColor={"#008000"}
+                    _hover={{ bgColor: "yellow", color: "black" }}
                     type="submit"
                     isLoading={isPending}
                   >
@@ -89,9 +89,9 @@ export default function RepliesThreadForm() {
                 </Box>
               </Flex>
             </form>
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
+          {/* </AccordionPanel> */}
+        {/* </AccordionItem> */}
+      {/* </Accordion> */}
     </Box>
   );
 }

@@ -41,7 +41,7 @@ export function useUpdateProfile() {
       const response = await API.get("/auth/check");
       dispatch(AUTH_CHECK(response.data.user));
 
-      console.log("update berhasil");
+      console.log("The update was successful");
       navigate("/");
     },
     onError: (error) => {
