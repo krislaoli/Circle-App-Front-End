@@ -32,9 +32,9 @@ export default function Thread() {
   day: "numeric",
   month: "long",
   year: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
+  // hour: "numeric",
+  // minute: "numeric",
+  // second: "numeric",
   })
 
   return (
@@ -106,12 +106,13 @@ export default function Thread() {
                 <Box key={item.id} p={4} boxShadow="xl">
                   <Flex gap={4}>
                     <Avatar
+                    
                       name={item.userId.full_name}
                       size={{ base: "sm", md: "md" }}
                     />
                     <Box mt={-2}>
                       <Box gap={4} mt={2}>
-                        <Text fontSize={"xs"} fontWeight={"bold"}>
+                        <Text fontSize={"14px"} fontWeight={"bold"}>
                           {item.userId.full_name}
                         </Text>
                         <Flex gap={1}>
@@ -130,7 +131,7 @@ export default function Thread() {
                         alignItems={"start"}
                         justifyContent={"center"}
                       >
-                        <Text mb={2} fontSize={"xs"}>
+                        <Text mb={2} fontSize={"16px"}>
                           {item.content}
                         </Text>
                         {item.image && (

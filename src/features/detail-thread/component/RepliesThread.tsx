@@ -28,7 +28,7 @@ export default function RepliesThreadForm() {
         {/* <AccordionItem> */}
           <h2>
             {/* <AccordionButton> */}
-              <Box as="span" flex="1" textAlign="left">
+              <Box as="span" flex="1" fontSize={"20px"} textAlign="left" >
                 Post Your Reply
               </Box>
             {/* </AccordionButton> */}
@@ -45,13 +45,14 @@ export default function RepliesThreadForm() {
                 w={"full"}
                 justifyContent={"space-between"}
               >
-                <Box display={"flex"} w={"full"} gap={4}>
+                <Box display={"flex"} padding={3} w={"full"} gap={4}>
                   <Avatar />
-                  <Box w={"80%"}>
+                  <Box w={"80%"} >
                     <Box
                       w={"full"}
                       borderBottom={"1px solid gray"}
                       mt={2}
+                      
                       pb={1}
                     >
                       <Input
@@ -60,6 +61,7 @@ export default function RepliesThreadForm() {
                         border={"none"}
                         onChange={handleChange}
                         value={form.content}
+                        
                         name="content"
                       />
                     </Box>

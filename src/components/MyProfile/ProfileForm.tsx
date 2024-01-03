@@ -16,6 +16,7 @@ export default function ProfileForm() {
   const { profile, mutate, isPending, handleChange } = useUpdateProfile();
   const shouldDisplaySidebar = useBreakpointValue({ base: false, md: true });
   const toast = useToast();
+
   return (
     <FormControl w={{ base: "115%", md: "50%" }}>
       <Box>
@@ -32,7 +33,6 @@ export default function ProfileForm() {
         >
           <FormControl justifyContent={"center"} display="flex" alignItems="center" >
             <Image
-              src={"https://i.pinimg.com/564x/eb/63/01/eb63014ef825a28f0003d27bd8078568.jpg"}
               alt="Profile Image"
               boxSize="100px"
               borderRadius="full"
