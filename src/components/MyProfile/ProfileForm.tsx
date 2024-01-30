@@ -6,12 +6,12 @@ import {
   Input,
   Button,
   useBreakpointValue,
-  Image,
-  IconButton,
+  // Image,
+  // IconButton,
   useToast,
 } from "@chakra-ui/react";
 import { useUpdateProfile } from "./hook/useUpdateProfile";
-import { AiFillEdit } from "react-icons/ai";
+// import { AiFillEdit } from "react-icons/ai";
 export default function ProfileForm() {
   const { profile, mutate, isPending, handleChange } = useUpdateProfile();
   const shouldDisplaySidebar = useBreakpointValue({ base: false, md: true });
@@ -20,7 +20,7 @@ export default function ProfileForm() {
   return (
     <FormControl w={{ base: "115%", md: "50%" }}>
       <Box>
-        <Text fontSize={"2xl"} fontWeight={"bold"} textAlign={"center"} mb={5}>
+        <Text fontSize={"2xl"} fontWeight={"bold"} textAlign={"center"} mb={5} color={"white"}>
           Edit Profile
         </Text>
       </Box>
@@ -31,7 +31,7 @@ export default function ProfileForm() {
             e.preventDefault(), mutate();
           }}
         >
-          <FormControl justifyContent={"center"} display="flex" alignItems="center" >
+          {/* <FormControl justifyContent={"center"} display="flex" alignItems="center" >
             <Image
               alt="Profile Image"
               boxSize="100px"
@@ -56,8 +56,8 @@ export default function ProfileForm() {
                 aria-label="Edit Profile Image"
               />
             </label>
-          </FormControl>
-          <Box display={"flex"} flexDirection={"column"} gap={6}>
+          </FormControl> */}
+          <Box display={"flex"} flexDirection={"column"} gap={6} color={"white"}>
             <FormControl>
               <FormLabel>Your name</FormLabel>
               <Input
@@ -112,6 +112,8 @@ export default function ProfileForm() {
                     loading: { title: "Please Wait" },
                   });
                 }}
+                color={"white"}
+                fontWeight={"bold"}
                 bgColor={"#008000"}
                 _hover={{ bgColor: "yellow", color: "black" }}
                 type="submit"
@@ -138,6 +140,7 @@ export default function ProfileForm() {
                 bgColor={"#008000"}
                 type="submit"
                 isLoading={isPending}
+                
               >
                 Save Profile
               </Button>

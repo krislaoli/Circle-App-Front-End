@@ -28,7 +28,7 @@ export default function RepliesThreadForm() {
         {/* <AccordionItem> */}
           <h2>
             {/* <AccordionButton> */}
-              <Box as="span" flex="1" fontSize={"20px"} textAlign="left" >
+              <Box as="span" flex="1" fontSize={"20px"} textAlign="left" color={"white"}>
                 Post Your Reply
               </Box>
             {/* </AccordionButton> */}
@@ -52,7 +52,7 @@ export default function RepliesThreadForm() {
                       w={"full"}
                       borderBottom={"1px solid gray"}
                       mt={2}
-                      
+                      color={"white"}
                       pb={1}
                     >
                       <Input
@@ -73,6 +73,7 @@ export default function RepliesThreadForm() {
                       type="file"
                       ref={fileInputRef}
                       hidden
+                      
                     />
                   </Box>
                 </Box>

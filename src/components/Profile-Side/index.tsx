@@ -56,6 +56,7 @@ export default function ProfileSide() {
             justifyContent={"end"}
             mt={2}
             mb={4}
+            
           >
             <Link to="/edit-profile">
               <Button
@@ -63,6 +64,7 @@ export default function ProfileSide() {
                 size="xs"
                 color={"white"}
                 borderRadius={"5px"}
+                _hover={{ bg: "white", color: "#11235A" }}
               >
                 Edit Profile
               </Button>

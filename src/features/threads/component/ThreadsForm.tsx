@@ -48,8 +48,8 @@ export default function ThreadsForm() {
                 onChange={handleChange}
                 name="content"
                 value={form.content}
+color={"white"}
                 mt={2}
-                // bgColor={"white"}
               />
             </Box>
             <Input

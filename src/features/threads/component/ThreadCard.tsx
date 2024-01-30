@@ -74,7 +74,7 @@ export default function ThreadCard({
   });
 
   return (
-    <Box w={{ base: "110%", md: "95%" }}>
+    <Box w={{ base: "110%", md: "95%"}}>
       <Box key={id} w={"full"}>
         <Card
           w={"105%"}
@@ -104,11 +104,11 @@ export default function ThreadCard({
                 {content}
               </Text>
               {image && (
-                <Box h={"550px"} w={"725px"} mt={4}>
+                <Box h={"250px"} w={"425px"} mt={4}>
                   <Image
                     src={image}
-                    h={"full"}
-                    w={"full"}
+                    h={"90%"}
+                    w={"90%"}
                     objectFit={"cover"}
                     style={{ borderRadius: "5px" }}
                   />

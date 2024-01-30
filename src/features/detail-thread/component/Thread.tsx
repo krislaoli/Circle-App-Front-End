@@ -81,8 +81,8 @@ export default function Thread() {
                   <Box>
                     <Image
                       src={DetailThread.image}
-                      h={"full"}
-                      // w={"full"}
+                      h={"50%"}
+                      w={"50%"}
                       // mt={4}
                       objectFit={"cover"}
                       style={{ borderRadius: "5px" }}

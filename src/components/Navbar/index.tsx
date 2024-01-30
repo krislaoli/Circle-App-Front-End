@@ -70,6 +70,7 @@ export default function Navbar() {
           w="80%"
           mt={6}
           fontWeight={"bold"}
+          color={"white"}
           _hover={{ bgColor: "yellow", color: "black" }}
           style={{ borderRadius: "10px" }}
         >

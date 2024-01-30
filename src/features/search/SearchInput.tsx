@@ -72,10 +72,12 @@ export function SearchList() {
               boxShadow="lg"
             />
             <Button
+            bgColor={"black"}
               onClick={handleFilterButtonClick}
-              color="#F8FAE5"
+              color="white"
               size={"sm"}
               mt={3}
+              _hover={{ bg: "white", color: "black" }}
             >
               <AiOutlineSearch />
             </Button>
