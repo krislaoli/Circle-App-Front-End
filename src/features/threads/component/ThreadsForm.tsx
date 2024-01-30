@@ -29,7 +29,7 @@ export default function ThreadsForm() {
       marginBottom={-20}
     >
       <Box mb={4}>
-        <Text fontSize={"xl"} >Home</Text>
+        <Text fontSize={"xl"} color={"white"}>Home</Text>
       </Box>
       <form
         onSubmit={(e) => {

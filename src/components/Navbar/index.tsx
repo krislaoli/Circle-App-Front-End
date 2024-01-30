@@ -40,26 +40,26 @@ export default function Navbar() {
 
         <List alignItems={"center"}>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiHomeCircle size={"1.5em"} />
-            <ListItem ms={3}>
+            <BiHomeCircle size={"1.5em"} color={"#fff"}/>
+            <ListItem ms={3} color={"#fff"}>
               <Link to="/">Home</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiSearchAlt size={"1.5em"} />
-            <ListItem ms={3}>
+            <BiSearchAlt size={"1.5em"} color={"#fff"}/>
+            <ListItem ms={3} color={"#fff"}>
               <Link to="/search">Search</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiHeart size={"1.5em"} />
-            <ListItem ms={3}>
+            <BiHeart size={"1.5em"} color={"#fff"}/>
+            <ListItem ms={3} color={"#fff"}>
               <Link to="/follow">Follows</Link>
             </ListItem>
           </Box>
           <Box display={"flex"} alignItems="center" marginBottom={30}>
-            <BiUserCircle size={"1.5em"} />
-            <ListItem ms={3}>
+            <BiUserCircle size={"1.5em"} color={"#fff"}/>
+            <ListItem ms={3} color={"#fff"}>
               <Link to="/profile">Profile</Link>
             </ListItem>
           </Box>

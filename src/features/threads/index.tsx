@@ -25,7 +25,7 @@ export default function Threads() {
               id={item.id}
               full_name={item.createdById?.full_name}
               username={usernameWithoutSpace}
-              created_at={item.created_at}
+              created_at={item.created_at ?? ""}
               content={item.content}
               image={item.image}
               replies={item.replies}

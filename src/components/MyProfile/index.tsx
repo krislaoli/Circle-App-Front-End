@@ -99,7 +99,7 @@ export default function MyProfile() {
       </Card>
       <Box marginTop={10} width={{ base: "87%", md: "100%", background: "#011b49;"}}>
         <Box>
-          <Text fontSize="xl" fontWeight={"bold"}>
+          <Text color={"white"} fontSize="xl" fontWeight={"bold"}>
             Your threads
           </Text>
           <Text fontSize="xs" color="gray.400">
@@ -112,7 +112,7 @@ export default function MyProfile() {
             id={item.id}
             full_name={item.createdById?.full_name}
             username={usernameUser}
-            created_at={item.created_at}
+            created_at={item.created_at ?? ""}
             content={item.content}
             image={item.image}
             replies={item.replies}
