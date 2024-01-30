@@ -63,7 +63,7 @@ export default function ThreadCard({
   }
 
   const currentDate = new Date(created_at);
-  const formatCurrentTime  = currentDate.toLocaleString("id-ID", {
+  const formatCurrentTime = currentDate.toLocaleString("id-ID", {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -74,7 +74,7 @@ export default function ThreadCard({
   });
 
   return (
-    <Box w={{ base: "110%", md: "95%"}}>
+    <Box w={{ base: "110%", md: "95%" }}>
       <Box key={id} w={"full"}>
         <Card
           w={"105%"}
