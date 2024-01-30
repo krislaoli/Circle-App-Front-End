@@ -97,7 +97,7 @@ export default function LoginCard() {
               >
                 Login
               </Button>
-              <Text color={"#black"} textAlign={"center"}>
+              <Text color={"white"} textAlign={"center"}>
                 Don't have an account yet?{" "}
                 <Link to="/register" color="#F4CE14">
                   <span style={{ color: "#F4CE14", fontWeight: "bold" }}>
